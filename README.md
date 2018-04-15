@@ -1,2 +1,1 @@
-# expressCut-unfinished
-Unfinished App
+# ExpressCut

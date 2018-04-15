@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <style>
+    body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-family: Arial;
+    margin: 0;
+    background-image: url(images/barberbackground.jpg);
+  }
+  
+
+
+ 
+h2 {
+    text-align: center;
+    background-color:rgba(255, 99, 71, 0.6);
+}
+
+a {
+    color: white;
+
+}
+
+ 
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: rgb(32, 240, 13);
+    font-weight: bold;
+    font-size: 20S0px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(224, 18, 36, 0.397);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+    padding-bottom: 10px;
+  }
+
+  /*.demo cursor{
+    padding: 8px 8px 8px 8px;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  .topnav-right {
+            float: right;
+        
+          }
+    
+    /* Style the footer */
+.footer {
+  
+    background-image: url(images/footerbg1.jpg);
+    padding: 10px;
+}
+.header {
+    background-image: url(images/footerbg1.jpg);
+    padding: 15px;
+   
+}.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    
+
+  
+  </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+        <div class="header">
+                <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#">About</a>
+                        <a href="#">Log Out</a>
+                        
+                      </div>
+                      
+                      
+                      <span style="font-size:30px;color:white;cursor:pointer; background-color:rgba(255, 99, 71, 0.6) ;" onclick="openNav()">&#9776;Menu
+                      
+                  
+
+               
+              </div>
+      
+
+
+
+
+
+          
+        
+        <img src="https://png.pngtree.com/element_origin_min_pic/16/09/24/1057e5dee59c746.jpg"alt="Barbershop" style="width:300px;height:250px;">
+        
+    <br><br>  
+    <!-- Center Alignment -->
+    <div style="text-align: center">
+
+        <!-- View Appointments -->
+        <div class="container">
+            <a class="btn btn-primary btn-lg" href="https://calendly.com/dashboard">View Appointments</a>
+        </div>
+
+        <br><br>
+
+
+        <!-- Edit Events and Calendars -->
+        <div class="container">
+            <a class="btn btn-primary btn-lg" href="https://calendly.com/event_types/personal">Edit Events and Calendars</a>
+        </div>
+
+        <br><br>
+
+
+
+        <!-- Update Profile-->
+        <div class="container">
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+              Update Profile
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                   <!--  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+                    <h4 class="modal-title" id="myModalLabel">Updates</h4>
+                  </div>
+                  <div class="modal-body">
+
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Profile</label>  
+                        <textarea class="form-control" rows="5" id="update-profile" placeholder="Update Profile"></textarea>
+                        <!-- <input class="form-control" rows="5" id="update-profile" placeholder="Update Profile"></input> -->
+                      </div> 
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addProfile()" id="save-profile">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+<br><br>
+
+
+    
+           
+  
+              <h2 style="color:white;" >GALLERY</h2>
+              
+              <div class="container">
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                  <img src="images\b1.jpg" style="width:30%">
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                  <img src="images\b2.jpg" style="width:30%">
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                  <img src="images\b3.jpg" style="width:30%">
+                </div>
+                  
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                  <img src="images\b4.jpg" style="width:30%">
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                  <img src="images\b5.jpg" style="width:30%">
+                </div>
+                  
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                  <img src="images\b6.jpg" style="width:30%">
+                </div>
+                  
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+              
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+              
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="images\b1.jpg" style="width:75%" onclick="currentSlide(1)" alt="The Woods">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images\b2.jpg" style="width:75%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images\b3.jpg" style="width:75%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images\b4.jpg" style="width:75%" onclick="currentSlide(4)" alt="Northern Lights">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="images\b5.jpg" style="width:75%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                  </div>    
+                  <div class="column">
+                    <img class="demo cursor" src="images\b6.jpg" style="width:75%" onclick="currentSlide(6)" alt="Snowy Mountains">
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                  var slideIndex = 1;
+                  showSlides(slideIndex);
+                  
+                  function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                  }
+                  
+                  function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                  }
+                  
+                  function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("demo");
+                    var captionText = document.getElementById("caption");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                    captionText.innerHTML = dots[slideIndex-1].alt;
+                  }
+                  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+                  </script>
+                  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                  
+                  <div class="footer">
+                        <p>Footer</p>
+                      </div>
+                      
+
+</body>
+</html>
